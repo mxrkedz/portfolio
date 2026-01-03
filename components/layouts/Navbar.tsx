@@ -24,9 +24,7 @@ export default function Navbar() {
               height={30}
               className="dark:invert"
             />
-            <span>
-              MXRKEDZ
-            </span>
+            <span>MXRKEDZ</span>
           </Link>
         </div>
         <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium">

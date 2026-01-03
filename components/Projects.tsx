@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { ArrowUpRight, FolderGit2 } from 'lucide-react';
 import { IconBrandGithub } from '@tabler/icons-react';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 
 export function Projects() {
   const projects = [
@@ -34,7 +33,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative w-full bg-white dark:bg-zinc-950 py-24"
+      className="relative w-full bg-white dark:bg-zinc-950 py-24 border-b border-zinc-200"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
