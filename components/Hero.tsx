@@ -48,7 +48,7 @@ export function Hero() {
           <div className="relative mx-auto w-full max-w-[500px] aspect-square lg:mr-0">
             <div className="relative h-full w-full overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 shadow-2xl">
               <Image
-                src="/profile.jpg"
+                src="/profile.JPG"
                 alt="Profile"
                 fill
                 className="object-cover object-center"
