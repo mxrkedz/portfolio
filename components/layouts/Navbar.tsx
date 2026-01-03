@@ -1,13 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
-import { Moon, Sun } from 'lucide-react';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -16,11 +17,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 items-center">
-        <div className="mx-3 md:flex md:flex-1">
+      <div className="container mx-auto flex h-14 items-center justify-between px-4 md:px-6">
+        <div className="flex items-center">
           <Link
             href="/"
             className="flex items-center gap-2 font-bold text-lg tracking-tighter"
+            onClick={() => setIsOpen(false)}
           >
             <Image
               src="/mxrkedz logo-black.svg"
@@ -32,7 +34,7 @@ export default function Navbar() {
             <span>MXRKEDZ</span>
           </Link>
         </div>
-        <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -43,24 +45,42 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="hidden md:flex md:flex-1 justify-end items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="text-zinc-800 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
+        <div className="hidden md:flex items-center gap-2">
           <Link href="#contact" className="no-underline">
             <Button size="lg" className="cursor-pointer">
               Contact Me
             </Button>
           </Link>
         </div>
+        <button
+          className="flex items-center justify-center p-2 md:hidden text-muted-foreground hover:text-foreground"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
+      {isOpen && (
+        <div className="absolute top-14 left-0 w-full border-b bg-background md:hidden">
+          <nav className="flex flex-col p-4 space-y-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-base font-medium text-muted-foreground transition-colors hover:text-primary"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="pt-2">
+              <Link href="#contact" onClick={() => setIsOpen(false)}>
+                <Button className="w-full">Contact Me</Button>
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
