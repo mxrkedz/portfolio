@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Send, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Send } from 'lucide-react';
 import {
   IconBrandDiscord,
   IconBrandGithub,
