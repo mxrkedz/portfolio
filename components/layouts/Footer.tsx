@@ -33,16 +33,16 @@ export function Footer() {
                 <IconBrandGithub className="h-4 w-4" />
               </Link>
               <Link
-                href="https://x.com/mxrkedz"
-                className="text-zinc-500 hover:text-white"
-              >
-                <IconBrandX className="h-4 w-4" />
-              </Link>
-              <Link
                 href="https://www.linkedin.com/in/john-mark-pabelico/"
                 className="text-zinc-500 hover:text-white"
               >
                 <IconBrandLinkedin className="h-4 w-4" />
+              </Link>
+              <Link
+                href="https://x.com/mxrkedz"
+                className="text-zinc-500 hover:text-white"
+              >
+                <IconBrandX className="h-4 w-4" />
               </Link>
               <Link
                 href="discord://discordapp.com/users/274468525056458753"

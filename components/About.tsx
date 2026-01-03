@@ -31,7 +31,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative w-full bg-white dark:bg-zinc-950 py-24 border-b border-zinc-200"
+      className="relative w-full bg-white dark:bg-zinc-950 py-24 border-b border-zinc-200 dark:border-zinc-800"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">

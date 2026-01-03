@@ -33,7 +33,7 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="relative w-full bg-white dark:bg-zinc-950 py-24 border-b border-zinc-200"
+      className="relative w-full bg-white dark:bg-zinc-950 py-24 border-b border-zinc-200 dark:border-zinc-800"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
@@ -114,7 +114,7 @@ export function Projects() {
                     ))}
                   </div>
                 </div>
-                <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800">
+                {/* <div className="mt-8 pt-6 border-t border-zinc-200 dark:border-zinc-800">
                   <Link
                     href={project.links.caseStudy}
                     className="inline-flex items-center text-sm font-semibold text-zinc-700 dark:text-zinc-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
@@ -122,7 +122,7 @@ export function Projects() {
                     Read Case Study
                     <ArrowUpRight className="ml-1 h-3 w-3" />
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

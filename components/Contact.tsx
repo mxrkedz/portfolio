@@ -3,6 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Send, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import {
+  IconBrandDiscord,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandX,
+} from '@tabler/icons-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -61,21 +67,30 @@ export function Contact() {
                 Connect on Socials
               </h3>
               <div className="flex gap-4">
-                <SocialLink
+                <Link
                   href="https://github.com/mxrkedz"
-                  icon={<Github className="h-5 w-5" />}
-                  label="GitHub"
-                />
-                <SocialLink
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900 transition-all hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 text-zinc-600 dark:text-zinc-400"
+                >
+                  <IconBrandGithub className="h-4 w-4" />
+                </Link>
+                <Link
                   href="https://www.linkedin.com/in/john-mark-pabelico/"
-                  icon={<Linkedin className="h-5 w-5" />}
-                  label="LinkedIn"
-                />
-                <SocialLink
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900 transition-all hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 text-zinc-600 dark:text-zinc-400"
+                >
+                  <IconBrandLinkedin className="h-4 w-4" />
+                </Link>
+                <Link
                   href="https://x.com/mxrkedz"
-                  icon={<Twitter className="h-5 w-5" />}
-                  label="X / Twitter"
-                />
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900 transition-all hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 text-zinc-600 dark:text-zinc-400"
+                >
+                  <IconBrandX className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="discord://discordapp.com/users/274468525056458753"
+                  className="group flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900 transition-all hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 text-zinc-600 dark:text-zinc-400"
+                >
+                  <IconBrandDiscord className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
@@ -176,26 +191,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  );
-}
-
-function SocialLink({
-  href,
-  icon,
-  label,
-}: {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}) {
-  return (
-    <Link
-      href={href}
-      target="_blank"
-      className="group flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900 transition-all hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400 text-zinc-600 dark:text-zinc-400"
-      aria-label={label}
-    >
-      {icon}
-    </Link>
   );
 }
