@@ -24,9 +24,7 @@ export default function Navbar() {
               height={30}
               className="dark:invert"
             />
-            <span>
-              MXRKEDZ<span className="text-blue-900">.DEV</span>
-            </span>
+            <span>MXRKEDZ</span>
           </Link>
         </div>
         <nav className="hidden md:flex items-center justify-center gap-8 text-sm font-medium">
@@ -41,11 +39,11 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="hidden md:flex md:flex-1 justify-end items-center gap-2">
-          <Link href="#contact" className="no-underline">
-            <Button size="lg" type="button" className="cursor-pointer">
+          <Button size="lg">
+            <Link href="#contact" className="flex items-center gap-2">
               Contact Me
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </header>
