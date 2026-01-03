@@ -1,4 +1,5 @@
 import { ComponentExample } from '@/components/component-example';
+import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function Page() {
@@ -6,6 +7,7 @@ export default function Page() {
     <>
       <Navbar />
       <ComponentExample />
+      <Footer />
     </>
   );
 }
