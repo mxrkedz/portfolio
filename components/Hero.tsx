@@ -1,11 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-zinc-950 pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
+    <section
+      id="home"
+      className="relative min-h-screen w-full overflow-hidden bg-white dark:bg-zinc-950 pt-16 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32"
+    >
       <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       <div className="container relative z-10 mx-auto px-6 lg:px-8">
         <div className="grid items-center justify-items-center gap-12 lg:grid-cols-2 lg:gap-8">
@@ -34,12 +37,12 @@ export function Hero() {
               </p>
             </div>
             <div className="flex flex-col gap-3 min-[400px]:flex-row justify-center lg:justify-start">
-              <Button size="lg">
-                <Link href="#projects" className="flex items-center gap-2">
+              <Link href="#projects" className="no-underline">
+                <Button size="lg" className="cursor-pointer">
                   View Projects
                   <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative mx-auto w-full max-w-[500px] aspect-square lg:mr-0">

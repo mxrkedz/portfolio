@@ -1,3 +1,4 @@
+import { About } from '@/components/About';
 import { ComponentExample } from '@/components/component-example';
 import { Hero } from '@/components/Hero';
 import { Footer } from '@/components/layouts/Footer';
@@ -9,6 +10,7 @@ export default function Page() {
       <Navbar />
       <Hero />
       {/* <ComponentExample /> */}
+      <About />
       <Footer />
     </>
   );
