@@ -31,7 +31,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative w-full bg-white dark:bg-zinc-950 py-24 border-b border-zinc-800"
+      className="relative w-full bg-white dark:bg-zinc-950 py-24"
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
@@ -40,7 +40,7 @@ export function About() {
               <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
                 About Me
               </h2>
-              <div className="h-1 w-20 rounded bg-black dark:bg-gradient-to-r dark:from-cyan-400 dark:to-emerald-400"></div>
+              <div className="h-1 w-20 rounded bg-zinc-900 dark:bg-gradient-to-r dark:from-cyan-400 dark:to-emerald-400"></div>
 
               <p className="text-muted-foreground text-lg leading-relaxed">
                 I am a{' '}
@@ -85,13 +85,13 @@ export function About() {
               {skills.map((group, idx) => (
                 <div
                   key={idx}
-                  className="rounded-xl border border-zinc-800 bg-zinc-900 dark:bg-zinc-900/30 p-6 transition-all hover:border-zinc-700 hover:bg-zinc-900/90 dark:hover:bg-zinc-900/50"
+                  className="rounded-xl border bg-white border-zinc-200 dark:bg-zinc-900/30 dark:border-zinc-800 p-6 transition-all hover:border-zinc-300 hover:bg-zinc-50 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/50"
                 >
                   <div className="mb-4 flex items-center gap-3">
-                    <div className="rounded-lg bg-zinc-900 p-2 border border-zinc-800">
+                    <div className="rounded-lg bg-zinc-50 p-2 border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800">
                       {group.icon}
                     </div>
-                    <h4 className="text-lg font-medium text-zinc-200">
+                    <h4 className="text-lg font-medium text-zinc-900 dark:text-zinc-200">
                       {group.category}
                     </h4>
                   </div>
@@ -101,7 +101,7 @@ export function About() {
                       <Badge
                         key={item}
                         variant="secondary"
-                        className="bg-zinc-950 border border-zinc-800 text-zinc-400 hover:text-white transition-colors px-3 py-1 text-sm font-normal cursor-default"
+                        className="bg-zinc-100 border border-zinc-200 text-zinc-700 hover:text-zinc-900 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-300 dark:hover:text-white transition-colors px-3 py-1 text-sm font-normal cursor-default"
                       >
                         {item}
                       </Badge>
