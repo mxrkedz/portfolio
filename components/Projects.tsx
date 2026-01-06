@@ -10,7 +10,7 @@ export function Projects() {
       title: 'Taguig Linguistic Exchange',
       description:
         'A feature-rich language application boasting real-time chat, AI speech, and gamified progress tracking.',
-      image: '/tlexx.png',
+      image: '/TLEX.png',
       tags: [
         'React.js',
         'Vite',
@@ -26,6 +26,26 @@ export function Projects() {
         demo: 'https://tlex-taupe.vercel.app/',
         github: 'https://github.com/mcodog/Langly',
         caseStudy: '/tlex',
+      },
+    },
+    {
+      title: 'Mokidex',
+      description:
+        'Mokidex is a specialized real-time market dashboard and portfolio tracker designed for the Moku ecosystem on the Ronin Network.',
+      image: '/Mokidex.png',
+      tags: [
+        'Next.js',
+        'Typescript',
+        'Tailwind CSS',
+        'Shadcn UI',
+        'Ronin GraphQL API',
+        'CoinGecko API',
+      ],
+
+      links: {
+        demo: 'https://mokidex.vercel.app/',
+        github: 'https://github.com/mxrkedz/mokidex',
+        caseStudy: '/mokidex',
       },
     },
   ];
